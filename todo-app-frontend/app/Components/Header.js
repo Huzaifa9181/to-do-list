@@ -10,27 +10,11 @@ const page = () => {
   return (
     <Navbar variant="dark" bg="dark" expand="lg">
       <Container fluid>
-        <Navbar.Brand><Link href="/"> React-Bootstrap </Link></Navbar.Brand>
+        <Navbar.Brand><Link href="/"> React-To-Do-List </Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-dark-example" />
         <Navbar.Collapse id="navbar-dark-example">
-          <Nav>
-            <Nav><Link href="/todo" className="text-white mt-2">TO Do LIST</Link></Nav>
-            <NavDropdown
-              id="nav-dropdown-dark-example"
-              title="Dropdown"
-              menuVariant="dark"
-            >
-
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
+          <Nav >
+            <Nav><Link href="/todo" className="text-white">TO Do LIST</Link></Nav>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -44,13 +44,14 @@ class ToDoListController extends Controller
         $validator = Validator::make($request->all(), [
             'title' => 'required',
             'description' => 'required',
+            'id' => 'required',
         ]);
 
         if ($validator->fails()) {
             return response()->json(['message' => $validator->errors()], 200);
         }
 
-        $data = new To_do_list();
+        $data = To_do_list::find($request->id);
         $data->title = $request->title;
         $data->description = $request->description;
         $data->update();
